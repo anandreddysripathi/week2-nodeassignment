@@ -11,7 +11,7 @@ function readDirectory() {
 }
 //this is the readContent and append data function
 function readAndAppendContent(file) {
-    fs.readFile(directory+file, (err, data) => {
+    fs.readFileSync(directory+file, (err, data) => {
         if (err) console.error(err);
         fs.appendFileSync('finalfile.txt', data.toString());
     });
